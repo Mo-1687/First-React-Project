@@ -1,0 +1,29 @@
+:root {
+  --main-color: #1abc9c;
+  --second-color: #2c3e50;
+}
+
+.home,
+.about,
+.contact,
+.portfolio {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+  padding-top: 150px;
+  min-height: calc(100vh - 10px);
+}
+
+.home,
+.about {
+  background-color: var(--main-color);
+  color: white;
+}
+
+.home img {
+  width: 240px;
+  height: 240px;
+  object-fit: cover;
+}

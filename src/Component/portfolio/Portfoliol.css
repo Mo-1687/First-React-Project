@@ -1,0 +1,25 @@
+.portfolio .tag,
+.contact .tag {
+  color: var(--second-color);
+}
+.portfolio .tag .tag-style::before,
+.portfolio .tag .tag-style::after,
+.contact .tag .tag-style::before,
+.contact .tag .tag-style::after {
+  background-color: #2c3e50;
+}
+
+.portfolio .img-container {
+  cursor: pointer;
+}
+.portfolio .img-container .overlay {
+  background-color: #1abc9ce6;
+  opacity: 0;
+  transition: opacity 0.6s ease;
+}
+.portfolio .img-container:hover .overlay {
+  opacity: 1;
+}
+.portfolio .display-model {
+  width: 550px;
+}

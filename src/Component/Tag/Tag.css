@@ -1,0 +1,16 @@
+.tag-style::after,
+.tag-style::before {
+  content: "";
+  position: absolute;
+  width: 75px;
+  height: 4px;
+  background-color: white;
+  bottom: 9px;
+}
+
+.tag-style::after {
+  left: 30px;
+}
+.tag-style::before {
+  right: 30px;
+}
