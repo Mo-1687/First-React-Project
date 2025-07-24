@@ -4,5 +4,11 @@ import react from '@vitejs/plugin-react'
 // https://vite.dev/config/
 export default defineConfig({
   base: "/First-React-Project",
-  plugins: [react()],
+  plugins: [react({
+    jsxRuntime: "automatic",
+    
+  })],
+  esbuild: {
+    loader: "jsx",
+  },
 });
