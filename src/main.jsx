@@ -5,7 +5,7 @@ import "../node_modules/bootstrap/dist/js/bootstrap.bundle.js"
 import "../node_modules/@fortawesome/fontawesome-free/css/all.min.css"
 import "../node_modules/@fortawesome/fontawesome-free/js/all.js"
 import './index.css'
-import App from './App.jsx'
+import App from './App'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
