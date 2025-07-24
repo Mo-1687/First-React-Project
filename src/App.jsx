@@ -7,19 +7,24 @@ import Portfolio from "./Component/portfolio/Portfolio";
 import NotFound from "./Component/notFound/NotFound";
 
 function App() {
-  const router = createBrowserRouter([
+  const router = createBrowserRouter(
+    [
+      {
+        path: "/",
+        element: <Layout />,
+        children: [
+          { index: true, element: <Home /> },
+          { path: "about", element: <About /> },
+          { path: "contact", element: <Contact /> },
+          { path: "portfolio", element: <Portfolio /> },
+        ],
+      },
+      { path: "*", element: <NotFound /> },
+    ],
     {
-      path: "/",
-      element: <Layout />,
-      children: [
-        { index: true, element: <Home /> },
-        { path: "about", element: <About /> },
-        { path: "contact", element: <Contact /> },
-        { path: "portfolio", element: <Portfolio /> },
-      ],
-    },
-    { path: "*", element: <NotFound /> },
-  ]);
+      basename: "/First-React-Project",
+    }
+  );
   return (
     <>
       <RouterProvider router={router} />
