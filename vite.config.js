@@ -1,14 +1,20 @@
-import { defineConfig } from 'vite'
-import react from '@vitejs/plugin-react'
+import { defineConfig } from 'vite';
+import react from '@vitejs/plugin-react';
 
-// https://vite.dev/config/
 export default defineConfig({
   base: "/First-React-Project",
   plugins: [react({
     jsxRuntime: "automatic",
-    
+    include: "**/*.jsx",
   })],
+  server: {
+    headers: {
+      'Content-Type': 'application/javascript',
+    },
+  },
   esbuild: {
-    loader: "jsx",
+    loader: 'jsx',
+    include: /src\/.*\.jsx?$/,
+    exclude: [],
   },
 });
