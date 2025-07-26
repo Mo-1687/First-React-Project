@@ -20,10 +20,7 @@ function App() {
         ],
       },
       { path: "*", element: <NotFound /> },
-    ],
-    {
-      basename: "/First-React-Project",
-    }
+    ]
   );
 
   return (
